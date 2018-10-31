@@ -1,0 +1,134 @@
+<DOCTYPE html>
+<html lang="en">
+	<head>
+	 <!-- Required meta tags -->
+	<title>Pizza Drill</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+	<link rel="stylesheet" href="./css/pizza_style.css">
+	
+	<!-- jumbotron -->
+			<div class="jumbotron jumbotron-fluid text-center bg-success mt-4 hidden-md-down">
+				<div class="container">
+					<h1 class="text-dark display-1">Tahoe Pie House Pizza</h1>
+						<h2 class="text-warning display-4">GMO-FREE Organic</h2>
+					<p class="display-3">Order Online Below!</p>
+				</div>
+			</div>
+			<!-- /jumbotron -->
+	</head>
+	
+	
+	
+	<!-- main content -->
+	<body>
+		<div id="container">
+			<div class="row">			
+					<div class="col-md-4">	
+								<div class="menu left">
+									<center><h2 class="heading-padding">Size</h2></center>
+										<form>
+									<input class="size" type="radio" name="size" value="Personal Pizza"> Personal Pizza<br>
+									<input class="size" type="radio" name="size" value="Medium Pizza"> Medium Pizza<br>
+									<input class="size" type="radio" name="size" value="Large Pizza" checked> Large Pizza<br>
+									<input class="size" type="radio" name="size" value="XL Pizza"> XL Pizza<br>	
+								</div>
+					</div>
+										</form>
+					<div class="col-md-4">
+								<div class="menu center">
+									<center><h2 class="heading-padding">Crust</h2></center>
+										<form>
+									<input class="crust" type="radio" name="crust" value="Thin Crust" checked> Thin Crust<br>
+									<input class="crust" type="radio" name="crust" value="Thick Crust"> Thick Crust<br>
+									<input class="crust" type="radio" name="crust" value="Cheese Stuffed Crust"> Cheese Stuffed Crust<br>
+									<input class="crust" type="radio" name="crust" value="Neopolitan Crust"> Neoploitan Crust<br>	
+									<input class="crust" type="radio" name="crust" value="Hand Tossed Crust"> Hand Tossed Crust<br>
+								</div>
+					</div>
+										</form>
+					<div class="col-md-4">
+								<div class="menu right">
+									<center><h2 class="heading-padding">Sauce</h2></center>	
+										<form>
+									<input class="sauce" type="radio" name="sauce" value="Marinara Sauce" checked> Marinara Sauce<br>
+									<input class="sauce" type="radio" name="sauce" value="White Sauce"> White Sauce<br>
+									<input class="sauce" type="radio" name="sauce" value="BBQ Sauce"> BBQ Sauce<br>
+									<input class="sauce" type="radio" name="sauce" value="Pesto Sauce"> Pesto Sauce<br>	 
+								</div>
+					</div>
+										</form>
+					<div class="col-md-4">
+								<div class="menu left">
+									<center><h2 class="heading-padding">Cheese</h2></center>
+										<form>
+									<input class="cheese" type="radio" name="cheese" value="Regular Cheese" checked> Regular Cheese<br>
+									<input class="cheese" type="radio" name="cheese" value="Extra Cheese"> Extra Cheese $3<br>
+									<input class="cheese" type="radio" name="cheese" value="No Cheese"> No Cheese<br>			
+								</div>
+					</div>
+										</form>
+					<div class="col-md-4">
+								<div class="menu center">
+									<center><h2 class="heading-padding">Meats</h2></center>
+										<form>
+									<input class="meats" type="checkbox" name="meats" value="Pepperoni"> Pepperoni<br>
+									<input class="meats" type="checkbox" name="meats" value="Sausage"> Sausage<br>
+									<input class="meats" type="checkbox" name="meats" value="Canadian Bacon" > Canadian Bacon<br>
+									<input class="meats" type="checkbox" name="meats" value="Ground Beef"> Ground Beef<br>
+									<input class="meats" type="checkbox" name="meats" value="Anchovy"> Bacon<br>
+									<input class="meats" type="checkbox" name="meats" value="Chicken"> Chicken<br>
+								</div>
+					</div>
+										</form>
+					<div class="col-md-4">
+								<div class="menu right">
+									<center><h2 class="heading-padding">Veggies</h2></center>
+										<form>
+									<input class="veggies" type="checkbox" name="veggies" value="Mushrooms"> Mushrooms<br>
+									<input class="veggies" type="checkbox" name="veggies" value="Black Olives"> Black Olives<br>
+									<input class="veggies" type="checkbox" name="veggies" value="Onions">Onions<br>	
+									<input class="veggies" type="checkbox" name="veggies" value="Green Peppers">Green Peppers<br>	
+									<input class="veggies" type="checkbox" name="veggies" value="Spinach">Spinach<br>
+									<input class="veggies" type="checkbox" name="veggies" value="Tomatoes">Tomatoes<br>	
+									<input class="veggies" type="checkbox" name="veggies" value="Pepperoncinis">Pepperoncinis<br>		  
+								</div>
+					</div>
+										</form>
+		</div>
+			<div class="divContent">
+				<input type="button" class="button" onclick="getReceipt()"
+					value="Place Order">
+				<input id="button" class="button" onclick="clearAll()"
+					value="Cancel">
+			</div>
+			
+			
+
+				<div id="cart">
+					<div class="total">
+						<div id="title1"><h2>You Ordered:</h2></div>
+							<div id="showText1"></div>
+				
+							<div id="title2"><h2>Subtotal:</h2></div>
+								<div id="showText2"></div>
+								<h2>Order Total</h2><div id="totalPrice2"></div>
+					</div>
+				</div>
+			
+			</form>
+		</div>
+					<script  src="./js/pizza.js"></script>
+					
+					<div class="col-md-14 mt-5 px-25">
+						<center><h4>The Best Pizza in Northern Nevada!!!</h4>
+						<img class="img-fluid" src="./img/pizzaone.jpg" alt=""/>
+						<br></br>
+					</div>
+			</div>
+		</div>
+	</body>
+</html>
